@@ -36,6 +36,11 @@ public class Main {
                     double limit = Math.pow(10, n3.length());
                     System.out.println("Number is " + checkIfPrime(Integer.parseInt(n3), limit));
                 }
+                case 4 -> {
+                    System.out.println("Enter inputs: ");
+                    int n4 = sc.nextInt();
+                    System.out.println("Factorial of "+n4+" - "+findFactorial(n4));
+                }
             }
         }
     }
@@ -66,6 +71,13 @@ public class Main {
             return "Prime";
         }else {
             return "Composite";
+        }
+    }
+    public static int findFactorial(int n){
+        if(n==1){
+            return 1;
+        }else{
+            return n * findFactorial(n-1);
         }
     }
 }
