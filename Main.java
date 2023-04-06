@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         boolean checkingLab = true;
         while (checkingLab) {
-            System.out.print("---Please enter task--- ");
+            System.out.print("\n"+"Please enter task: ");
             int task = sc.nextInt();
             switch (task) {
                 case 0 ->{
@@ -40,6 +40,17 @@ public class Main {
                     System.out.println("Enter inputs: ");
                     int n4 = sc.nextInt();
                     System.out.println("Factorial of "+n4+" - "+findFactorial(n4));
+                }
+                case 5 -> {
+                    System.out.println("Enter inputs: ");
+                    int n5 = sc.nextInt();
+                    System.out.println(findInFibonacci(n5));
+                }
+                case 6 -> {
+                    System.out.println("Enter inputs: ");
+                    int n6 = sc.nextInt();
+                    int power = sc.nextInt();
+                    System.out.println(countPower(n6, power));
                 }
             }
         }
@@ -79,5 +90,15 @@ public class Main {
         }else{
             return n * findFactorial(n-1);
         }
+    }
+    public static int findInFibonacci(int n){
+        if(n==0 | n==1){
+            return n;
+        }else {
+            return findInFibonacci(n-1) + findInFibonacci(n-2);
+        }
+    }
+    public static double countPower(int a, int n){
+        return Math.pow(a, n);
     }
 }
