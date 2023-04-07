@@ -52,6 +52,18 @@ public class Main {
                     int power = sc.nextInt();
                     System.out.println(countPower(n6, power));
                 }
+                case 7 ->{
+                    System.out.println("Enter inputs:");
+                    int n7 = sc.nextInt();
+                    int[] arr7 = new int[n7];
+                    for (int i = 0; i < n7; i++) {
+                        arr7[i] = sc.nextInt();
+                    }
+                    System.out.print(reverseArr(n7, arr7)+" ");
+
+                }
+
+
 
             }
         }
@@ -101,6 +113,15 @@ public class Main {
     }
     public static double countPower(int a, int n){
         return Math.pow(a, n);
+    }
+
+    public static int reverseArr(int n, int[] arr) {
+       if((n-1)==0){
+           return arr[n-1];
+       }else {
+           System.out.print(arr[n-1]+" ");
+           return reverseArr(n-1, arr);
+       }
     }
 
 }
