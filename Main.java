@@ -60,7 +60,11 @@ public class Main {
                         arr7[i] = sc.nextInt();
                     }
                     System.out.print(reverseArr(n7, arr7)+" ");
-
+                }
+                case 8 -> {
+                    System.out.println("Enter inputs:");
+                    String line = sc.next();
+                    System.out.println(checkOnlyDigits(line));
                 }
 
 
@@ -122,6 +126,21 @@ public class Main {
            System.out.print(arr[n-1]+" ");
            return reverseArr(n-1, arr);
        }
+    }
+    public static String checkOnlyDigits(String s){
+        boolean onlyDidits = true;
+        try{
+            int digits = Integer.parseInt(s);
+            System.out.println(digits+": not only numbers");
+        }catch (NumberFormatException numberFormatException){
+            onlyDidits = false;
+        }
+
+        if(onlyDidits){
+            return "Yes";
+        }else{
+            return "No";
+        }
     }
 
 }
