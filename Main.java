@@ -44,7 +44,7 @@ public class Main {
                 case 5 -> {
                     System.out.println("Enter inputs: ");
                     int n5 = sc.nextInt();
-                    System.out.println(findInFibonacci(n5));
+                    System.out.println(findFibonacci(n5));
                 }
                 case 6 -> {
                     System.out.println("Enter inputs: ");
@@ -52,6 +52,7 @@ public class Main {
                     int power = sc.nextInt();
                     System.out.println(countPower(n6, power));
                 }
+
             }
         }
     }
@@ -91,14 +92,15 @@ public class Main {
             return n * findFactorial(n-1);
         }
     }
-    public static int findInFibonacci(int n){
+    public static int findFibonacci(int n){
         if(n==0 | n==1){
             return n;
         }else {
-            return findInFibonacci(n-1) + findInFibonacci(n-2);
+            return findFibonacci(n-1) + findFibonacci(n-2);
         }
     }
     public static double countPower(int a, int n){
         return Math.pow(a, n);
     }
+
 }
