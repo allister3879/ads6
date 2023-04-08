@@ -68,11 +68,16 @@ public class Main {
                 }
                 case 9 -> {
                     System.out.println("Enter inputs: ");
-                    int n = sc.nextInt();
+                    int n9 = sc.nextInt();
                     int k = sc.nextInt();
-                    System.out.println(getBinomElement(n)/(getBinomElement(k)*getBinomElement(n-k)));
+                    System.out.println(getBinomElement(n9)/(getBinomElement(k)*getBinomElement(n9-k)));
                 }
-
+                case 10 -> {
+                    System.out.println("Enter inputs: ");
+                    int a10 = sc.nextInt();
+                    int b10 = sc.nextInt();
+                    System.out.println((findGCD(a10, b10)));
+                }
 
             }
         }
@@ -152,6 +157,15 @@ public class Main {
             return x;
         }else{
             return x*getBinomElement(x-1);
+        }
+    }
+    public static double findGCD(double a, double b){
+        double q = a/b;
+        double r = a%b;
+        if(r == 0){
+            return b;
+        }else{
+            return findGCD(b, r);
         }
     }
 
