@@ -66,7 +66,12 @@ public class Main {
                     String line = sc.next();
                     System.out.println(checkOnlyDigits(line));
                 }
-
+                case 9 -> {
+                    System.out.println("Enter inputs: ");
+                    int n = sc.nextInt();
+                    int k = sc.nextInt();
+                    System.out.println(getBinomElement(n)/(getBinomElement(k)*getBinomElement(n-k)));
+                }
 
 
             }
@@ -140,6 +145,13 @@ public class Main {
             return "Yes";
         }else{
             return "No";
+        }
+    }
+    public static int getBinomElement(int x){
+        if(x==1){
+            return x;
+        }else{
+            return x*getBinomElement(x-1);
         }
     }
 
